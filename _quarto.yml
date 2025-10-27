@@ -1,11 +1,17 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    - "!downloads/**"
+  resources:
+    - downloads/**
 
 website:
   title: "Intelligent Machines"
   description: "A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code."
-  site-url: "https://your-github-username.github.io" # Update with your actual URL
+  site-url: "https://patrickddx.github.io/Intelligent-Machines" # Update with your actual URL
   open-graph:
     image: images/logo.png
     image-alt: "Intelligent Machines Logo"

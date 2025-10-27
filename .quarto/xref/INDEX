@@ -34,5 +34,14 @@
   },
   "posts/00_Example_structure/example.ipynb": {
     "example.html": "8ba104c3"
+  },
+  "posts/02_Medical_Costs_Regression/Medical_Costs_Regression.ipynb": {
+    "Medical_Costs_Regression.html": "6a31f044"
+  },
+  "posts/02_Medical_Costs_Regression/downloads/Medical_Costs_Regression_notebook.ipynb": {
+    "Medical_Costs_Regression_notebook.html": "706265bc"
+  },
+  "downloads/Medical_Costs_Regression_notebook.ipynb": {
+    "Medical_Costs_Regression_notebook.html": "a08cd743"
   }
 }
