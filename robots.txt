@@ -1,1 +1,1 @@
-Sitemap: https://your-github-username.github.io/sitemap.xml
+Sitemap: https://patrickddx.github.io/Intelligent-Machines/sitemap.xml

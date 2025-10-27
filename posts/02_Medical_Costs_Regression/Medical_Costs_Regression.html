@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Patrick Linke">
+<meta name="dcterms.date" content="2025-10-27">
 
-<title>Topics – Intelligent Machines</title>
+<title>Predicting Medical Costs - A Regression Problem – Intelligent Machines</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9859d952baf36b9a7db628bbb9f3169e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9859d952baf36b9a7db628bbb9f3169e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,100 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-pinned .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-pinned'] = new List('listing-pinned', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recent .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recent'] = new List('listing-recent', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Topics – Intelligent Machines">
-<meta property="og:image" content="https://your-github-username.github.io/posts/images/logo.png">
+<meta property="og:title" content="Predicting Medical Costs - A Regression Problem – Intelligent Machines">
+<meta property="og:description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
+<meta property="og:image" content="https://patrickddx.github.io/Intelligent-Machines/posts/02_Medical_Costs_Regression/images/logo.png">
 <meta property="og:site_name" content="Intelligent Machines">
 <meta property="og:image:alt" content="Intelligent Machines Logo">
-<meta name="twitter:title" content="Topics – Intelligent Machines">
-<meta name="twitter:image" content="https://your-github-username.github.io/posts/images/logo.png">
+<meta name="twitter:title" content="Predicting Medical Costs - A Regression Problem – Intelligent Machines">
+<meta name="twitter:description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
+<meta name="twitter:image" content="https://patrickddx.github.io/Intelligent-Machines/posts/02_Medical_Costs_Regression/images/logo.png">
 <meta name="twitter:image:alt" content="Intelligent Machines Logo">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -175,11 +94,11 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/logo.png" alt="" class="navbar-logo light-content">
-    <img src="../images/logo.png" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo light-content">
+    <img src="../../images/logo.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Intelligent Machines</span>
     </a>
   </div>
@@ -190,19 +109,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../home.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../posts/index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -217,21 +136,59 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWVkaWNhbA==">Medical <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVncmVzc2lvbg==">Regression <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#key-results" id="toc-key-results" class="nav-link" data-scroll-target="#key-results">1. Key Results</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">2. Why It Matters</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">3. The Data</a></li>
+  </ul></li>
+  <li><a href="#methods-results" id="toc-methods-results" class="nav-link" data-scroll-target="#methods-results">Methods &amp; Results</a>
+  <ul class="collapse">
+  <li><a href="#what-i-did" id="toc-what-i-did" class="nav-link" data-scroll-target="#what-i-did">4. What I Did</a></li>
+  <li><a href="#what-i-found" id="toc-what-i-found" class="nav-link" data-scroll-target="#what-i-found">5. What I Found</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned">6. What I Learned</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">7. What’s Next</a></li>
+  </ul></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Topics</h1>
-</div>
+<h1 class="title">Predicting Medical Costs - A Regression Problem</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Regression</div>
+    <div class="quarto-category">Medicine</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Patrick Linke </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 27, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -241,77 +198,164 @@ window.Quarto = {
 </header>
 
 
+<p><img src="images/medical_costs_cover.png" class="img-fluid"></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="key-results" class="level2">
+<h2 class="anchored" data-anchor-id="key-results">1. Key Results</h2>
+<ul>
+<li><em>Charges generally rise with age.</em></li>
+<li><em>Smokers consistently have higher and more variable charges than non-smokers.</em></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Decision_Tree_plot_small.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 0 Showing the most important features identified by a Decision Tree Regressor.</figcaption>
+</figure>
+</div>
+<div id="2a3acd88" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<div>
 
 
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-pinned">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1761343200000" data-listing-file-modified-sort="1761479572742" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491">
-<div class="thumbnail"><a href="../posts/01_Welcome/Hello_Blog.html" class="no-external">
-
-<p class="card-img-top"><img src="..\images\robot.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/01_Welcome/Hello_Blog.html" class="no-external">Hello Blog!</a>
-</h3>
-<div class="delink listing-description"><a href="../posts/01_Welcome/Hello_Blog.html" class="no-external">
-I decided to start this blog to document my machine learning journey in public.<br>
-I am fascinated by idea of building intelligent machines that can learn from data and help…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/01_Welcome/Hello_Blog.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2025
-</div>
-<div class="listing-author">
-Patrick Linke
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><div class="quarto-listing quarto-listing-container-default" id="listing-recent">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UmVncmVzc2lvbiUyQ01lZGljYWw=" data-listing-date-sort="1761343200000" data-listing-file-modified-sort="1761479572760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="363">
-<div class="thumbnail"><a href="../posts/02_Medical_Costs_Regression/blog_Regression_project.html" class="no-external">
-
-<p class="card-img-top"><img src="02_Medical_Costs_Regression\images\age_vs_charges.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/02_Medical_Costs_Regression/blog_Regression_project.html" class="no-external">Predicting Medical Costs - A Regression Problem</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVncmVzc2lvbg=='); return false;">Regression</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVkaWNhbA=='); return false;">Medical</div>
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Models</th>
+<th data-quarto-table-cell-role="th">MAE</th>
+<th data-quarto-table-cell-role="th">MSE</th>
+<th data-quarto-table-cell-role="th">RMSE</th>
+<th data-quarto-table-cell-role="th">R2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>LinearRegression</td>
+<td>4092.36</td>
+<td>31333268.50</td>
+<td>5597.61</td>
+<td>0.79</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>SVR</td>
+<td>3373.30</td>
+<td>37706594.68</td>
+<td>6140.57</td>
+<td>0.75</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>DecisionTreeRegressor</td>
+<td>2755.59</td>
+<td>21655894.86</td>
+<td>4653.59</td>
+<td>0.86</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>RandomForestRegressor</td>
+<td>2459.69</td>
+<td>18958974.55</td>
+<td>4354.19</td>
+<td>0.88</td>
+</tr>
+</tbody>
+</table>
 
 </div>
-<div class="delink listing-description"><a href="../posts/02_Medical_Costs_Regression/blog_Regression_project.html" class="no-external">
-<strong>One-sentence summary of what you did and found. + key figures</strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../posts/02_Medical_Costs_Regression/blog_Regression_project.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2025
-</div>
-<div class="listing-author">
-Patrick Linke
-</div>
-</a>
 </div>
 </div>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">2. Why It Matters</h2>
+<p>Predicting medical costs isn’t just a math problem — it’s about understanding the real price of our health choices. For insurers, these predictions guide fairer pricing and risk assessment. For individuals, they reveal how habits like smoking or maintaining a healthy BMI can shape future expenses. In a world where healthcare costs can make or break financial stability, this kind of model helps turn data into smarter, more informed decisions.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">3. The Data</h2>
+<p>The dataset comes from the <a href="https://www.kaggle.com/datasets/mirichoi0218/insurance">Medical Cost Personal Dataset</a> on Kaggle, containing <strong>1,338 observations</strong>, each representing a single U.S. health insurance policyholder. Key features include <strong>age</strong>, <strong>sex</strong>, <strong>BMI</strong>, <strong>number of children</strong>, <strong>smoker status</strong>, and <strong>region</strong>. The <strong>target variable</strong>, <em>charges</em>, captures each person’s annual medical cost, ranging from about $1,000 to over $60,000. Despite its small size, the dataset offers rich insights into how lifestyle and demographics drive healthcare expenses.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/numeric_dist_histplot.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 1 Shows the Distribution of Numeric Features in the Medical Costs Dataset</figcaption>
+</figure>
 </div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cat_dist_histplot.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 2 Shows the Distribution of Categorical Features in the Medical Costs Dataset</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="methods-results" class="level1">
+<h1>Methods &amp; Results</h1>
+<section id="what-i-did" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-did">4. What I Did</h2>
+<p>Explored the medical cost dataset with visuals — distributions, correlations, and feature effects — to link age, BMI, and smoking to charges. Cleaned numeric features with StandardScaler and categorical variables with OneHotEncoder. Trained LinearRegression, SVR, DecisionTreeRegressor, and RandomForestRegressor, tuning hyperparameters with RandomizedSearchCV. Evaluated MAE, MSE, RMSE, and R² on the test set and compared models visually.</p>
+</section>
+<section id="what-i-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-found">5. What I Found</h2>
+<p>Insurance charges tend to increase with age. Smokers have significantly higher and more variable charges compared to non-smokers, whose costs show a smoother, more consistent trend.<br>
+Among smokers, insurance charges generally increase with higher BMI, while BMI has little impact on costs for non-smokers. Within non-smokers, age drives costs.</p>
+<p>Feature importance analysis (from the tree-based models) highlighted smoking, age, and BMI as the top predictors — confirming both domain expectations and model consistency.</p>
+<p>The Random Forest Regressor achieved the best results, with the lowest RMSE (≈ 4354) and highest R² (≈ 0.88), indicating strong predictive accuracy and generalization on unseen data, showing that it is possible to predict medical costs based on key personal and lifestyle factors. This demonstrates that data-driven models can effectively capture the underlying relationships between health behaviors and medical expenses, enabling more accurate cost forecasting and better-informed healthcare and policy decisions.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/age_vs_charges.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 3 Charges increase with age, and smokers have significantly higher and more variable charges than non-smokers.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/bmi_vs_charges.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 4 Smokers consistently have higher charges than non-smokers. Among smokers, charges increase strongly with BMI (r ≈ 0.81), while among non-smokers, BMI has almost no relationship with charges (r ≈ 0.08). This indicates a strong interaction effect — smoking amplifies the impact of BMI on charges.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Decision_Tree_plot.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 5 Decision tree regression model predicting medical insurance charges. The model splits data points into groups based on key factors. The most important splitting criterion is smoking status. Among non-smokers, age is the most influential variable, while for smokers, BMI plays the dominant role. The “value” shown in each node represents the model’s predicted target value (here, the estimated insurance cost in dollars).</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/RMSE_score.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 6 Comparison of Root Mean Squared Error (RMSE) values for different regression models on the test set. The RMSE measures the average magnitude of prediction errors, with lower values indicating better model performance. The Random Forest Regressor achieved the lowest RMSE, followed by the Decision Tree Regressor, while the SVR and Linear Regression models showed higher error levels, suggesting less accurate predictions.)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/R2_score.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 7 Comparison of R² scores for different regression models on the test set. The R² score represents the proportion of variance in medical insurance charges explained by each model. Higher values indicate better predictive performance. The Random Forest Regressor achieved the highest R², followed closely by the Decision Tree Regressor, while Linear Regression and SVR showed comparatively lower explanatory power.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">6. What I Learned</h2>
+<p>Model performance improved with complexity:<br>
+Tree-based models, especially Random Forest, captured the nonlinear impact of health and lifestyle factors most effectively. The findings align with real-world intuition — smokers and older individuals face substantially higher insurance costs.</p>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">7. What’s Next</h2>
+<p>This project shows that predicting medical costs is possible — but there’s room to grow. Future work could explore more advanced models like Gradient Boosting or XGBoost to see if they capture even subtler patterns in the data. Another direction is adding richer features to improve model depth and realism. Finally, scaling this work to larger, more diverse datasets would help assess how well these findings hold up across different populations. The next steps are open — it’s up to you to take this foundation and push it further.</p>
+</section>
+</section>
+<section id="credits" class="level1">
+<h1>Credits</h1>
+<p><strong>Thanks for Reading the Post!</strong></p>
+<p>Inspired by Chapter 2 from <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 3rd Edition by Aurélien Géron</a></p>
+<p><a href="../../downloads/Medical_Costs_Regression_notebook.ipynb" download="" class="btn btn-primary"> ⬇️ Download The Notebook </a></p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -385,7 +429,7 @@ Patrick Linke
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/your-github-username\.github\.io");
+        var filterRegex = new RegExp("https:\/\/patrickddx\.github\.io\/Intelligent-Machines");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -722,8 +766,8 @@ Patrick Linke
 <p>© 2025 Patrick Linke</p>
 </div>
     <div class="nav-footer-right">
-<p>Built with Quarto</p>
-</div>
+      &nbsp;
+    </div>
   </div>
 </footer>
 
