@@ -45,7 +45,7 @@ I focus on:
 
 ## Start Here
 
-[You can start here](/posts/01_Welcome/Hello_Blog.ipynb) or explore the [Blog](/posts/)!
+[You can start here](/posts/01_Welcome/Hello_Blog.ipynb) or explore the Blog!
 <br>Have fun!
 
 ## Let's Connect

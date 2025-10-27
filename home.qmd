@@ -12,11 +12,12 @@ description: "A learning-in-public journal documenting applied machine learning 
 
 ## Recent Posts
 
-Check out my latest projects in the [Blog](/posts/) section, where I share complete workflows, code, and insights from working with real datasets.
+Check out my latest projects in the Blog section, where I share complete workflows, code, and insights from working with real datasets.
 
 ## Exploring Machine Learning Through Real Data
 
-Welcome to my learning-in-public journal where I document my journey through applied machine learning. [Here](about.qmd), you'll find more information about this blog.
+Welcome to my learning-in-public journal where I document my journey through applied machine learning. 
+<br>[Here](about.qmd), you'll find more information about this blog.
 
 ---
 
