@@ -1,0 +1,23 @@
+---
+title: "Intelligent Machines"
+description: "A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code."
+---
+
+# From Data to Decisions
+
+<div style="text-align:center; margin: 2rem 0;">
+  <img src="images/logo.png" alt="Intelligent Machines Logo" style="max-width: 200px;">
+  <br><br>[Getting Started](/posts/01_Welcome/Hello_Blog.ipynb)
+</div>
+
+## Recent Posts
+
+Check out my latest projects in the [Blog](/posts/) section, where I share complete workflows, code, and insights from working with real datasets.
+
+## Exploring Machine Learning Through Real Data
+
+Welcome to my learning-in-public journal where I document my journey through applied machine learning. [Here](about.qmd), you'll find more information about this blog.
+
+---
+
+*Learning in public • Building understanding • Sharing insights*

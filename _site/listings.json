@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/01_Welcome/Hello_Blog.html",
+      "/posts/02_Medical_Costs_Regression/blog_Regression_project.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/01_Welcome/Hello_Blog.html",
+      "/posts/02_Medical_Costs_Regression/blog_Regression_project.html"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "index.qmd": {
+    "index.html": "94817784"
+  },
+  "posts/test_folder/test.ipynb": {
+    "test.html": "c7fb43e4"
+  },
+  "posts/index.qmd": {
+    "index.html": "f67ce551"
+  },
+  "posts/01_Medical_Costs_Regression/Regression_project.ipynb": {
+    "Regression_project.html": "62997fc8"
+  },
+  "about.qmd": {
+    "about.html": "9c949c35"
+  },
+  "posts/01_Medical_Costs_Regression/Regression_project.qmd": {
+    "Regression_project.html": "7f79802a"
+  },
+  "contact.qmd": {
+    "contact.html": "67d036cf"
+  },
+  "posts/01_Welcome/Hello_Blog.ipynb": {
+    "Hello_Blog.html": "1859a82a"
+  },
+  "posts/02_Medical_Costs_Regression/Regression_project.ipynb": {
+    "Regression_project.html": "3dbd4fbd"
+  },
+  "posts/02_Medical_Costs_Regression/blog_Regression_project.ipynb": {
+    "blog_Regression_project.html": "21d29d39"
+  },
+  "home.qmd": {
+    "home.html": "fd9f2542"
+  },
+  "posts/00_Example_structure/example.ipynb": {
+    "example.html": "8ba104c3"
+  }
+}

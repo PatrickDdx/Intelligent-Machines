@@ -1,0 +1,46 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Intelligent Machines"
+  description: "A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code."
+  site-url: "https://your-github-username.github.io" # Update with your actual URL
+  open-graph:
+    image: images/logo.png
+    image-alt: "Intelligent Machines Logo"
+  twitter-card:
+    image: images/logo.png
+    image-alt: "Intelligent Machines Logo"
+  navbar:
+    logo: images/logo.png
+    left:
+      - href: home.qmd
+        text: Home
+      - href: index.qmd
+        text: Blog
+      - href: about.qmd
+        text: About
+      - href: contact.qmd
+        text: Contact
+  page-navigation: true      
+  page-footer:
+    center: "© 2025 Patrick Linke"
+    #right: "Built with Quarto"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-copy: true
+    #code-fold: true
+    #code-fold: false
+    #embed-resources: true
+    #css: 
+    #  - styles.css  # Optional: add custom CSS file
+    #include-in-header:
+    #  - analytics.html  # Optional: add Google Analytics
+
+execute:
+  #freeze: auto
+  eval: false

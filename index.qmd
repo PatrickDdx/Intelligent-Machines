@@ -1,0 +1,19 @@
+---
+title: "Topics"
+listing:
+  - id: pinned
+    contents: "../posts/**/*.ipynb"
+    include: 
+      pinned: true
+    sort: "date asc"
+    type: default
+    categories: true
+
+  - id: recent
+    contents: "../posts/**/*.ipynb"
+    exclude:
+      pinned: true
+    sort: "data desc"
+    type: default
+    categories: true
+---
