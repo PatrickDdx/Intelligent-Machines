@@ -1,4 +1,4 @@
-<img src="../../images/robot.png">
+<img src="images/robot.png">
 
 # Hello and Welcome to My Blog!
 
