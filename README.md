@@ -21,7 +21,7 @@ If you'd like to try the code yourself, you can download my notebooks and run th
 Of course, you can also type along without downloading the notebooks.
 
 I highly encourage you to experiment with the code  — this is one of the best learning experiences you’ll have!  
-If you get stuck or have any questions, feel free to reach out to my via the [Contact](../../contact.qmd) page or ask an LLM :).  
+If you get stuck or have any questions, feel free to reach out to my via the [Contact](https://patrickddx.github.io/Intelligent-Machines/contact.html) page or ask an LLM :).  
 In general, ChatGPT, Claude, Gemnini, and similar models are great at explaining code, so feel free to use them to enhance your learning experience!
 
 **That said, there’s no pressure to code along.** You can absolutely enjoy this blog by simply reading the posts, exploring the visuals, and following the explanations.  
@@ -41,9 +41,9 @@ It is also fairly easy to learn, so I encourage you to check it out if any of th
 - **Seaborn** — advanced statistical plotting 
 - **Scikit-Learn** — classical machine learning algorithms
 
-# Thanks for Reading This!
+# Thanks for Reading This First Post!
 
-If you’d like to know more about me and why I started this blog, check out the [Blog](https://patrickddx.github.io/Intelligent-Machines/) and have fun!
+If you’d like to know more about me and why I started this blog, check out the [About page](https://patrickddx.github.io/Intelligent-Machines/about.html). Otherwise, dive into the next post and have fun!
 
 This is just the beginning. Let’s see where curiosity — and a bit of code — takes us.
 
