@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Patrick Linke">
+<meta name="dcterms.date" content="2025-11-02">
 
-<title>Topics – Intelligent Machines</title>
+<title>Who Survived the Titanic? A Data-Driven Look at Chance, Class, and Choice – Intelligent Machines</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9859d952baf36b9a7db628bbb9f3169e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9859d952baf36b9a7db628bbb9f3169e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,105 +70,21 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-pinned .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-pinned'] = new List('listing-pinned', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recent .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recent'] = new List('listing-recent', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<meta property="og:title" content="Topics – Intelligent Machines">
-<meta property="og:image" content="https://patrickddx.github.io/Intelligent-Machines/images/logo.png">
+<meta property="og:title" content="Who Survived the Titanic? A Data-Driven Look at Chance, Class, and Choice – Intelligent Machines">
+<meta property="og:description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
+<meta property="og:image" content="https://patrickddx.github.io/Intelligent-Machines/posts/03_titanic/images/Titanic_sideview.png">
 <meta property="og:site_name" content="Intelligent Machines">
 <meta property="og:image:alt" content="Intelligent Machines Logo">
-<meta property="og:image:height" content="500">
-<meta property="og:image:width" content="500">
-<meta name="twitter:title" content="Topics – Intelligent Machines">
-<meta name="twitter:image" content="https://patrickddx.github.io/Intelligent-Machines/images/logo.png">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
+<meta name="twitter:title" content="Who Survived the Titanic? A Data-Driven Look at Chance, Class, and Choice – Intelligent Machines">
+<meta name="twitter:description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
+<meta name="twitter:image" content="https://patrickddx.github.io/Intelligent-Machines/posts/03_titanic/images/Titanic_sideview.png">
 <meta name="twitter:image:alt" content="Intelligent Machines Logo">
-<meta name="twitter:image-height" content="500">
-<meta name="twitter:image-width" content="500">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -179,11 +95,11 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.png" alt="" class="navbar-logo light-content">
-    <img src="./images/logo.png" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo light-content">
+    <img src="../../images/logo.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Intelligent Machines</span>
     </a>
   </div>
@@ -194,19 +110,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./home.html"> 
+    <a class="nav-link" href="../../home.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -221,21 +137,57 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q2xhc3NpZmljYXRpb24=">Classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVkaWNpbmU=">Medicine <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UmVncmVzc2lvbg==">Regression <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#key-results" id="toc-key-results" class="nav-link" data-scroll-target="#key-results">1 Key Results</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">2. Why It Matters</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">3. The Data</a></li>
+  </ul></li>
+  <li><a href="#methods-results" id="toc-methods-results" class="nav-link" data-scroll-target="#methods-results">Methods &amp; Results</a>
+  <ul class="collapse">
+  <li><a href="#what-i-did" id="toc-what-i-did" class="nav-link" data-scroll-target="#what-i-did">4. What I Did</a></li>
+  <li><a href="#what-i-found" id="toc-what-i-found" class="nav-link" data-scroll-target="#what-i-found">5. What I Found</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned">6. What I Learned</a></li>
+  </ul></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Topics</h1>
-</div>
+<h1 class="title">Who Survived the Titanic? A Data-Driven Look at Chance, Class, and Choice</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Classification</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Patrick Linke </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 2, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -245,107 +197,116 @@ window.Quarto = {
 </header>
 
 
+<p><img src="images/Titanic_sideview.png" class="img-fluid"></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="key-results" class="level2">
+<h2 class="anchored" data-anchor-id="key-results">1 Key Results</h2>
+<p>Who survived the <strong>Titanic</strong> shipwreck — and why? Beneath this tragic event lies a fascinating data story of class, age, and gender.</p>
+<p>Through <strong>Exploratory Data Analysis (EDA)</strong> and <strong>machine learning</strong>, I built models to predict passenger survival and uncover the hidden patterns behind the numbers. While the <strong>overall survival</strong> rate was only about 38%, survival wasn’t random — <em>women</em>, <em>children</em>, and <em>first-class passengers</em> had dramatically higher chances. This project became a hands-on introduction to <strong>classification modeling</strong> and key evaluation metrics like <strong>Precision</strong>, <strong>Recall</strong>, and <strong>F1-Score</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/accuracy by model.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 1 Shows the Accuracy scores of different Baseline Models, along with a box plot highlighting the lower and upper quartiles, and “whiskers” showing the extent of the scores. The SVM was then selected for fine-tuning and evaluating Performance Metrics.</figcaption>
+</figure>
+</div>
+<p><img src="images/classification/SR by age and gender.png" class="img-fluid"></p>
+</section>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">2. Why It Matters</h2>
+<p>Predicting survival in the Titanic disaster dataset isn’t just an academic challenge — it’s central to how we think about risk, fairness and decision-making in real-world scenarios. When we study what factors (such as gender, class, age) determined survival, these insights help policy makers, emergency planners and data scientists to better design protocols that save lives in future crises.</p>
+<p>By applying Exploratory Data Analysis (EDA) and machine learning techniques to this classification problem, we learn not only how to build models that predict outcomes, but also why those outcomes occurred. That matters because in the fields of transportation safety, disaster response and social equity, it’s not enough to know who survived — we want to understand why. These learnings help organisations and analysts make informed decisions around resource allocation, training and evacuation strategies — ultimately leading to safer systems and more equitable responses.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">3. The Data</h2>
+<p>The dataset from the Kaggle competition “Titanic – Machine Learning from Disaster” consists of a training set of 891 passenger records and a test set of 418 records. Each row describes a passenger on the RMS Titanic and includes features such as:</p>
+<ul>
+<li>Ticket class: 1st, 2nd, 3rd</li>
+<li>Sex (male or female)</li>
+<li>Age (in years)</li>
+<li>Number of siblings/spouses aboard</li>
+<li>Number of parents/children aboard</li>
+<li>Ticket fare paid</li>
+<li>Port of embarkation: Cherbourg/Queenstown/Southampton</li>
+</ul>
+<p>The target variable is Survived (0 = died, 1 = survived) for each passenger in the training set.</p>
+<p>Link to the public dataset: https://www.kaggle.com/competitions/titanic/data</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/Distribution_of_features.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 2 Shows the Distribution of the Features in the Dataset. Port of Embarkation: C = Cherbourg, Q = Queenstown, S = Southampton</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/survivors.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 3 Distribution of the Target. Overall Survival Rate is ~38%</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="methods-results" class="level1">
+<h1>Methods &amp; Results</h1>
+<section id="what-i-did" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-did">4. What I Did</h2>
+<p>The workflow followed a straightforward pattern: <strong>EDA</strong> → <strong>Feature Engineering</strong> → <strong>Model Training</strong> → <strong>Evaluation</strong>.</p>
+<p>During feature engineering, I created meaningful variables such as AgeGroup (Child, Teen, Young Adult, Adult, Senior), cabin_present (indicating whether a cabin number was available), and RelativesOnboard (the sum of SibSp and Parch).</p>
+<p>I trained several baseline models — <strong>SGD</strong>, <strong>SVM</strong>, <strong>Decision Tree</strong>, and <strong>Random Forest</strong> — and compared their performance using <strong>accuracy</strong>. The <strong>SVM</strong> model performed best, so I fine-tuned it with <strong>GridSearchCV</strong> to optimize hyperparameters.</p>
+<p>Final performance was evaluated using <strong>Accuracy</strong>, <strong>Precision</strong>, <strong>Recall</strong>, and <strong>F1-Score</strong> to ensure balanced assessment across all prediction outcomes.</p>
+</section>
+<section id="what-i-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-found">5. What I Found</h2>
+<p>Influence of Features on <strong>Survival Rates</strong></p>
+<ul>
+<li><p><strong>Gender</strong> was the single strongest predictor of survival. Females had consistently higher survival probabilities (~0.59–0.94), while males saw a steep drop after childhood (~0.09–0.23).</p></li>
+<li><p><strong>Passenger Class</strong> clearly stratified outcomes — higher class meant better chances. The extremes: 1st-class females (~0.97 survival) vs 3rd-class males (~0.14).</p></li>
+<li><p><strong>Age</strong> mattered: children were prioritized during evacuation. Boys and girls under 12 had similar survival rates (~0.57–0.59), but after adolescence, the gender gap widened sharply.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/SR by Class and Gender.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 4 Survival Rate by Passenger Class and Gender. Gender dominates survival: females outlive males in every class. Class amplifies it: higher class → higher survival for both genders.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/SR by age and gender.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 5 Survival Rate by Age and Gender. Clear “women and children first” pattern; gender dominates age once past childhood. Strong gender effect: females had high survival across ages (~0.59–0.94), males low after childhood (~0.09–0.23). Children were prioritized: boys and girls had similar, relatively high survival.</figcaption>
+</figure>
+</div>
+<p><strong>Performance Metrics of the Best Model</strong> (SVM): - Accuracy 82% - Precision: 80% - Recall: 72% - F1-Score: 76%</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/precision_recall_curve.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 6 Precision-Recall Curve of the SVM Model.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/classification/roc_curve_svm.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 7 ROC Curve of the SVM Model. AUC = 0.83.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">6. What I Learned</h2>
+<p>This project taught me how to build and evaluate C<strong>lassification Models</strong> end to end — from preprocessing raw data to fine-tuning hyperparameters. I deepened my understanding of key evaluation metrics such as <strong>Accuracy</strong>, <strong>Precision</strong>, <strong>Recall</strong>, <strong>F1-Score</strong>, and the <strong>Confusion Matrix</strong>, as well as diagnostic tools like the <strong>Precision-Recall</strong> and <strong>ROC Curves</strong>.</p>
+<p>Through <strong>EDA</strong> and thoughtful feature engineering, I saw how data visualization and preprocessing pipelines can transform raw numbers into insights that explain why models make certain predictions — not just how well they perform.</p>
+</section>
+</section>
+<section id="credits" class="level1">
+<h1>Credits</h1>
+<p><strong>Thanks for Reading the Post!</strong></p>
+<p>Inspired by Chapter 3 from <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 3rd Edition by Aurélien Géron</a></p>
+<p><a href="../../downloads/Titanic_classification_notebook.ipynb" download="" class="btn btn-primary"> ⬇️ Download The Notebook </a></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-pinned">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1761343200000" data-listing-file-modified-sort="1761591485517" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491">
-<div class="thumbnail"><a href="./posts/01_Welcome/Hello_Blog.html" class="no-external">
-
-<p class="card-img-top"><img src="images\robot.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/01_Welcome/Hello_Blog.html" class="no-external">Hello Blog!</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/01_Welcome/Hello_Blog.html" class="no-external">
-I decided to start this blog to document my machine learning journey in public.<br>
-I am fascinated by idea of building intelligent machines that can learn from data and help…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/01_Welcome/Hello_Blog.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2025
-</div>
-<div class="listing-author">
-Patrick Linke
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div><div class="quarto-listing quarto-listing-container-default" id="listing-recent">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Q2xhc3NpZmljYXRpb24=" data-listing-date-sort="1762038000000" data-listing-file-modified-sort="1762084601560" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="800">
-<div class="thumbnail"><a href="./posts/03_titanic/Titanic_blog.html" class="no-external">
-
-<img loading="lazy" src="./posts/03_titanic/images/Titanic_sideview.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/03_titanic/Titanic_blog.html" class="no-external">Who Survived the Titanic? A Data-Driven Look at Chance, Class, and Choice</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2xhc3NpZmljYXRpb24='); return false;">Classification</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/03_titanic/Titanic_blog.html" class="no-external">
-Who survived the <strong>Titanic</strong> shipwreck — and why? Beneath this tragic event lies a fascinating data story of class, age, and gender.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/03_titanic/Titanic_blog.html" class="no-external">
-<div class="listing-date">
-Nov 2, 2025
-</div>
-<div class="listing-author">
-Patrick Linke
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UmVncmVzc2lvbiUyQ01lZGljaW5l" data-listing-date-sort="1761519600000" data-listing-file-modified-sort="1761594998923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="819">
-<div class="thumbnail"><a href="./posts/02_Medical_Costs_Regression/Medical_Costs_Regression.html" class="no-external">
-
-<p class="card-img-top"><img src="posts\02_Medical_Costs_Regression\images\medical_costs_cover.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/02_Medical_Costs_Regression/Medical_Costs_Regression.html" class="no-external">Predicting Medical Costs - A Regression Problem</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UmVncmVzc2lvbg=='); return false;">Regression</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVkaWNpbmU='); return false;">Medicine</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/02_Medical_Costs_Regression/Medical_Costs_Regression.html" class="no-external">
-Predicting medical costs isn’t just a math problem — it’s about understanding the real price of our health choices. For insurers, these predictions guide fairer pricing and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/02_Medical_Costs_Regression/Medical_Costs_Regression.html" class="no-external">
-<div class="listing-date">
-Oct 27, 2025
-</div>
-<div class="listing-author">
-Patrick Linke
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

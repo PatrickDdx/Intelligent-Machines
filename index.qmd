@@ -13,7 +13,7 @@ listing:
     contents: "../posts/**/*.ipynb"
     exclude:
       pinned: true
-    sort: "data desc"
+    sort: "date desc"
     type: default
     categories: true
 ---
