@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
+<meta name="author" content="Patrick Linke">
+<meta name="dcterms.date" content="2026-06-05">
 
-<title>Intelligent Machines</title>
+<title>Predicting Appointment No-Shows – Intelligent Machines</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,23 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0a67aa2ed9c3e6117c1e1bf21d4ce19e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0a67aa2ed9c3e6117c1e1bf21d4ce19e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,19 +74,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="Intelligent Machines">
-<meta property="og:description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
-<meta property="og:image" content="https://patrickddx.github.io/Intelligent-Machines/images/logo.png">
+<meta property="og:title" content="Predicting Appointment No-Shows – Intelligent Machines">
+<meta property="og:image" content="https://patrickddx.github.io/Intelligent-Machines/posts/04_No-show/images/logo.png">
 <meta property="og:site_name" content="Intelligent Machines">
 <meta property="og:image:alt" content="Intelligent Machines Logo">
-<meta property="og:image:height" content="500">
-<meta property="og:image:width" content="500">
-<meta name="twitter:title" content="Intelligent Machines">
-<meta name="twitter:description" content="A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.">
-<meta name="twitter:image" content="https://patrickddx.github.io/Intelligent-Machines/images/logo.png">
+<meta name="twitter:title" content="Predicting Appointment No-Shows – Intelligent Machines">
+<meta name="twitter:image" content="https://patrickddx.github.io/Intelligent-Machines/posts/04_No-show/images/logo.png">
 <meta name="twitter:image:alt" content="Intelligent Machines Logo">
-<meta name="twitter:image-height" content="500">
-<meta name="twitter:image-width" content="500">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -96,11 +91,11 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.png" alt="" class="navbar-logo light-content">
-    <img src="./images/logo.png" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo light-content">
+    <img src="../../images/logo.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Intelligent Machines</span>
     </a>
   </div>
@@ -111,19 +106,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./home.html" aria-current="page"> 
+    <a class="nav-link" href="../../home.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -142,10 +137,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#from-data-to-decisions" id="toc-from-data-to-decisions" class="nav-link active" data-scroll-target="#from-data-to-decisions">From Data to Decisions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#recent-posts" id="toc-recent-posts" class="nav-link" data-scroll-target="#recent-posts">Recent Posts</a></li>
-  <li><a href="#exploring-machine-learning-through-real-data" id="toc-exploring-machine-learning-through-real-data" class="nav-link" data-scroll-target="#exploring-machine-learning-through-real-data">Exploring Machine Learning Through Real Data</a></li>
+  <li><a href="#key-results" id="toc-key-results" class="nav-link" data-scroll-target="#key-results">1. Key Results</a></li>
+  <li><a href="#why-it-matters" id="toc-why-it-matters" class="nav-link" data-scroll-target="#why-it-matters">2. Why it Matters</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">3. The Data</a></li>
+  </ul></li>
+  <li><a href="#methods-results" id="toc-methods-results" class="nav-link" data-scroll-target="#methods-results">Methods &amp; Results</a>
+  <ul class="collapse">
+  <li><a href="#what-i-did" id="toc-what-i-did" class="nav-link" data-scroll-target="#what-i-did">4. What I did</a></li>
+  <li><a href="#what-i-found" id="toc-what-i-found" class="nav-link" data-scroll-target="#what-i-found">5. What I Found</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#what-i-learned" id="toc-what-i-learned" class="nav-link" data-scroll-target="#what-i-learned">6. What I Learned</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">7. What’s Next</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -155,19 +161,32 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Intelligent Machines</h1>
-</div>
-
-<div>
-  <div class="description">
-    A learning-in-public journal documenting applied machine learning projects with real datasets, clear explanations, and reproducible code.
+<h1 class="title">Predicting Appointment No-Shows</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MachineLearning</div>
+    <div class="quarto-category">Healthcare</div>
+    <div class="quarto-category">Classification</div>
+    <div class="quarto-category">Medicine</div>
   </div>
-</div>
+  </div>
+
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Patrick Linke </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 5, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -177,20 +196,258 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="from-data-to-decisions" class="level1">
-<h1>From Data to Decisions</h1>
-<div style="text-align:center; margin: 2rem 0;">
-<p><img src="images/logo.png" alt="Intelligent Machines Logo" style="max-width: 200px;"> <br><br><a href="./posts/01_Welcome/Hello_Blog.html">Getting Started</a></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="key-results" class="level2">
+<h2 class="anchored" data-anchor-id="key-results">1. Key Results</h2>
+<p>Will a patient show up for a scheduled medical appointment?<br>
+Through Exploratory Data Analysis (EDA) and machine learning, I built models to predict ‘No-shows’.</p>
+<ul>
+<li><em>No-show rate rises with longer waiting period</em></li>
+<li><em>The event of previous no-shows inceases the pobability of another no-show in the future</em></li>
+<li><em>SMS reminders and call reminders both lower the no-show rate</em></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/no_show_prediction/no_shows.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 1 Showing the effect of different variables on the No-show rate.</figcaption>
+</figure>
 </div>
-<section id="recent-posts" class="level2">
-<h2 class="anchored" data-anchor-id="recent-posts">Recent Posts</h2>
-<p>Check out my latest projects in the Blog section, where I share complete workflows, code, and insights from working with real datasets.</p>
 </section>
-<section id="exploring-machine-learning-through-real-data" class="level2">
-<h2 class="anchored" data-anchor-id="exploring-machine-learning-through-real-data">Exploring Machine Learning Through Real Data</h2>
-<p>Welcome to my learning-in-public journal where I document my journey through applied machine learning. <br><a href="./about.html">Here</a>, you’ll find more information about this blog.</p>
-<hr>
-<p><em>Learning in public • Building understanding • Sharing insights</em></p>
+<section id="why-it-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-it-matters">2. Why it Matters</h2>
+<p>‘No-shows’ - patients who booked an appointment but do not show up - have a real impact on a clinic’s schedule and revenue.</p>
+<p>No-shows waste clinician time, push back waiting lists, and quietly worsen outcomes for the very patients who don’t turn up. If a clinic could flag the ~10% of bookings most at risk, it could target reminders, overbook intelligently, or reach out personally — turning a prediction into fewer gaps in care.</p>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">3. The Data</h2>
+<p>The dataset from Kaggle “Synthetic Healthcare Appointment No-Show Dataset” consists of 50,000 scheduled medical appointment. Each row is one scheduled visit, described by features like <em>age, waiting days, previous no-shows, patient satisfaction score, SMS / reminder calls, weekday, and appointment type</em>. The target is no_show (0 = attended, 1 = missed).</p>
+<p>Link to the public dataset: https://www.kaggle.com/datasets/emirhanakku/synthetic-healthcare-appointment-no-show-dataset</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/no_show_prediction/distribution_of_features.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 2 Showing the distibution of some features in the dataset. The first thing that jumps out is class imbalance: only 4,138 of 50,000 appointments were no-shows.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="methods-results" class="level1">
+<h1>Methods &amp; Results</h1>
+<section id="what-i-did" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-did">4. What I did</h2>
+<p>The workflow was a simple pattern: <strong>EDA</strong> → <strong>preprocessing</strong> → <strong>baseline models</strong> → <strong>fine-tuning</strong> → <strong>evaluation</strong>.</p>
+<p>Explored the Healthcare Appointment No-Show Dataset with visuals — distributions, correlations, and feature effects. Cleaned numeric features with Imputer (median) + StandardScaler and categorical variables with Imputer (most-frequent) + OneHotEncoder.</p>
+<p>Trained a <strong>Dummy</strong>, <strong>SGD</strong>, <strong>Linear SVM</strong>, a <strong>Decision Tree</strong>, and a <strong>Random Forest</strong>, then fine-tuned the best baseline models.</p>
+<p>Because the classes are so imbalanced, accuracy is useless here — a model that predicts “show” every time scores 92%.<br>
+So I evaluated on <strong>ROC-AUC</strong>, <strong>Precision</strong>, <strong>Recall</strong>, and <strong>F1-Score</strong>, used <em>class_weight=“balanced”</em> to stop the models ignoring the minority class, and validated with 10-fold stratified cross-validation.</p>
+</section>
+<section id="what-i-found" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-found">5. What I Found</h2>
+<p>A few patterns came through cleanly in the EDA:</p>
+<p><strong>Waiting time matters.</strong> The longer the gap between booking and appointment, the higher the no-show rate — patients forget, or life gets in the way.</p>
+<p><strong>Reminders work.</strong> Both SMS and reminder calls measurably lowered the no-show rate, with the two combined doing best.</p>
+<p><strong>Past behaviour predicts future behaviour.</strong> Each additional previous no-show pushed the probability of skipping up sharply.</p>
+<p><strong>Satisfaction tracks attendance.</strong> Lower patient satisfaction scores lined up with higher no-show rates.</p>
+<p>On performance, the linear models won. The Random Forest posted decent AUC but collapsed on recall (it barely caught any no-shows), while the Decision Tree was little better than guessing.</p>
+<table class="dataframe table table-sm table-striped small">
+
+<thead>
+
+<tr>
+
+<th>
+</th>
+
+<th>
+Model
+</th>
+
+<th>
+roc_auc
+</th>
+
+<th>
+precision
+</th>
+
+<th>
+recall
+</th>
+
+<th>
+f1
+</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<th>
+0
+</th>
+
+<td>
+Dummy
+</td>
+
+<td>
+0.50
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.00
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+1
+</th>
+
+<td>
+SGD
+</td>
+
+<td>
+0.67
+</td>
+
+<td>
+0.14
+</td>
+
+<td>
+0.62
+</td>
+
+<td>
+0.22
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+2
+</th>
+
+<td>
+SVM
+</td>
+
+<td>
+0.71
+</td>
+
+<td>
+0.15
+</td>
+
+<td>
+0.63
+</td>
+
+<td>
+0.24
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+3
+</th>
+
+<td>
+DecisionTree
+</td>
+
+<td>
+0.52
+</td>
+
+<td>
+0.12
+</td>
+
+<td>
+0.12
+</td>
+
+<td>
+0.12
+</td>
+
+</tr>
+
+<tr>
+
+<th>
+4
+</th>
+
+<td>
+RandomForest
+</td>
+
+<td>
+0.68
+</td>
+
+<td>
+0.44
+</td>
+
+<td>
+0.00
+</td>
+
+<td>
+0.01
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+<p><br> The tuned SGD classifier came out on top and became the final model, with a cross-validated ROC-AUC of ~0.71. On the held-out test set, the trade-off the imbalance forces becomes obvious: the model catches 59% of true no-shows (recall), but only 15% of its no-show flags are correct (precision). In plain terms — it’s a useful early-warning, not a verdict.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/no_show_prediction/confusion_matrix.png" class="img-fluid figure-img"></p>
+<figcaption>Fig. 3 Showing the predicted and true labels. 0 = Attended; 1 = No-show</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<section id="what-i-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-i-learned">6. What I Learned</h2>
+<p>The biggest lesson was that the metric defines the model. On data this imbalanced, accuracy rewards a model for doing nothing useful, so choosing ROC-AUC, recall, and F1 — and setting class_weight=“balanced” — was what made the project work at all.</p>
+<p>The model’s “failure” is worth naming honestly. A precision of 15% means most flagged patients would still have attended. But in a clinic, that’s an acceptable trade: the cost of a reminder SMS is near zero, while the cost of a missed appointment is high. A high-recall, low-precision model is exactly what you want for a cheap, low-risk intervention — you’d rather over-remind than miss the patients who genuinely won’t come.</p>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">7. What’s Next</h2>
+<p>Test this thinking on a real-world appointment dataset, where the messiness of human behaviour makes the problem genuinely worth solving.</p>
+<p>While this is synthetic data, the core logic can be used to solve the real world problem: target the right metric, respect the imbalance, and build around a realistic clinical action.</p>
+<p><a href="../../downloads/no_show_prediction.ipynb" download="" class="btn btn-primary"> ⬇️ Download The Notebook </a></p>
 
 
 </section>
