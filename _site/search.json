@@ -4,14 +4,14 @@
     "href": "posts/04_No-show/no_show_prediction_blog.html",
     "title": "Predicting Appointment No-Shows",
     "section": "",
-    "text": "Will a patient show up for a scheduled medical appointment?\nThrough Exploratory Data Analysis (EDA) and machine learning, I built models to predict ‘No-shows’.\n\nNo-show rate rises with longer waiting period\nThe event of previous no-shows inceases the pobability of another no-show in the future\nSMS reminders and call reminders both lower the no-show rate\n\n\n\n\nFig. 1 Showing the effect of different variables on the No-show rate.\n\n\n\n\n\n‘No-shows’ - patients who booked an appointment but do not show up - have a real impact on a clinic’s schedule and revenue.\nNo-shows waste clinician time, push back waiting lists, and quietly worsen outcomes for the very patients who don’t turn up. If a clinic could flag the ~10% of bookings most at risk, it could target reminders, overbook intelligently, or reach out personally — turning a prediction into fewer gaps in care.\n\n\n\nThe dataset from Kaggle “Synthetic Healthcare Appointment No-Show Dataset” consists of 50,000 scheduled medical appointment. Each row is one scheduled visit, described by features like age, waiting days, previous no-shows, patient satisfaction score, SMS / reminder calls, weekday, and appointment type. The target is no_show (0 = attended, 1 = missed).\nLink to the public dataset: https://www.kaggle.com/datasets/emirhanakku/synthetic-healthcare-appointment-no-show-dataset\n\n\n\nFig. 2 Showing the distibution of some features in the dataset. The first thing that jumps out is class imbalance: only 4,138 of 50,000 appointments were no-shows."
+    "text": "Will a patient show up for a scheduled medical appointment?\nThrough Exploratory Data Analysis (EDA) and machine learning, I built models to predict ‘No-shows’.\n\nNo-show rate rises with longer waiting period\nThe event of previous no-shows increases the pobability of another no-show in the future\nSMS reminders and call reminders both lower the no-show rate\n\n\n\n\nFig. 1 Showing the effect of different variables on the No-show rate.\n\n\n\n\n\n‘No-shows’ - patients who booked an appointment but do not show up - have a real impact on a clinic’s schedule and revenue.\nNo-shows waste clinician time, push back waiting lists, and quietly worsen outcomes for the very patients who don’t turn up. If a clinic could flag the ~10% of bookings most at risk, it could target reminders, overbook intelligently, or reach out personally — turning a prediction into fewer gaps in care.\n\n\n\nThe dataset from Kaggle “Synthetic Healthcare Appointment No-Show Dataset” consists of 50,000 scheduled medical appointment. Each row is one scheduled visit, described by features like age, waiting days, previous no-shows, patient satisfaction score, SMS / reminder calls, weekday, and appointment type. The target is no_show (0 = attended, 1 = missed).\nLink to the public dataset: https://www.kaggle.com/datasets/emirhanakku/synthetic-healthcare-appointment-no-show-dataset\n\n\n\nFig. 2 Showing the distibution of some features in the dataset. The first thing that jumps out is class imbalance: only 4,138 of 50,000 appointments were no-shows."
   },
   {
     "objectID": "posts/04_No-show/no_show_prediction_blog.html#key-results",
     "href": "posts/04_No-show/no_show_prediction_blog.html#key-results",
     "title": "Predicting Appointment No-Shows",
     "section": "",
-    "text": "Will a patient show up for a scheduled medical appointment?\nThrough Exploratory Data Analysis (EDA) and machine learning, I built models to predict ‘No-shows’.\n\nNo-show rate rises with longer waiting period\nThe event of previous no-shows inceases the pobability of another no-show in the future\nSMS reminders and call reminders both lower the no-show rate\n\n\n\n\nFig. 1 Showing the effect of different variables on the No-show rate."
+    "text": "Will a patient show up for a scheduled medical appointment?\nThrough Exploratory Data Analysis (EDA) and machine learning, I built models to predict ‘No-shows’.\n\nNo-show rate rises with longer waiting period\nThe event of previous no-shows increases the pobability of another no-show in the future\nSMS reminders and call reminders both lower the no-show rate\n\n\n\n\nFig. 1 Showing the effect of different variables on the No-show rate."
   },
   {
     "objectID": "posts/04_No-show/no_show_prediction_blog.html#why-it-matters",
@@ -116,7 +116,7 @@
     "href": "contact.html#lets-connect",
     "title": "Contact",
     "section": "Let’s Connect",
-    "text": "Let’s Connect\nI’d love to connect with fellow machine learning enthusiasts, especially those interested in healthcare applications and data science.\n\nLinkedIn: My LinkedIn Profile\nGitHub: My GitHub Profile\n\n\nAlways happy to chat about ML, medicine, and the intersection of both!"
+    "text": "Let’s Connect\nI’d love to connect with fellow machine learning enthusiasts, especially those interested in healthcare applications and data science.\n\nLinkedIn: My LinkedIn Profile\nGitHub: My GitHub Profile"
   },
   {
     "objectID": "about.html#who-am-i",
@@ -165,7 +165,7 @@
     "href": "home.html",
     "title": "Intelligent Machines",
     "section": "",
-    "text": "Getting Started\n\n\n\nCheck out my latest projects in the Blog section, where I share complete workflows, code, and insights from working with real datasets.\n\n\n\nWelcome to my learning-in-public journal where I document my journey through applied machine learning. Here, you’ll find more information about this blog.\n\nLearning in public • Building understanding • Sharing insights"
+    "text": "Getting Started\n\n\n\nCheck out my latest projects in the Blog section, where I share complete workflows, code, and insights from working with real datasets.\n\n\n\nWelcome to my learning-in-public journal where I document my journey through applied machine learning. Here, you’ll find more information about this blog."
   },
   {
     "objectID": "home.html#recent-posts",
@@ -179,7 +179,7 @@
     "href": "home.html#exploring-machine-learning-through-real-data",
     "title": "Intelligent Machines",
     "section": "",
-    "text": "Welcome to my learning-in-public journal where I document my journey through applied machine learning. Here, you’ll find more information about this blog.\n\nLearning in public • Building understanding • Sharing insights"
+    "text": "Welcome to my learning-in-public journal where I document my journey through applied machine learning. Here, you’ll find more information about this blog."
   },
   {
     "objectID": "posts/01_Welcome/Hello_Blog.html",

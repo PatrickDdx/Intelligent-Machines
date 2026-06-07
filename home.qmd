@@ -18,7 +18,3 @@ Check out my latest projects in the Blog section, where I share complete workflo
 
 Welcome to my learning-in-public journal where I document my journey through applied machine learning. 
 <br>[Here](about.qmd), you'll find more information about this blog.
-
----
-
-*Learning in public • Building understanding • Sharing insights*
