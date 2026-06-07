@@ -31,7 +31,7 @@ website:
         text: Contact
   page-navigation: true      
   page-footer:
-    center: "© 2025 Patrick Linke"
+    center: "© 2026 Patrick Linke"
     #right: "Built with Quarto"
 
 format:
